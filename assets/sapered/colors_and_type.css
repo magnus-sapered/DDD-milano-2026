@@ -1,0 +1,253 @@
+/* =============================================================
+   SAPERED — Colors & Type
+   Dark-first design system for digital / web presence.
+   ============================================================= */
+
+/* ---------- FONTS ---------- */
+@font-face {
+  font-family: "Navigo";
+  src: url("./fonts/Navigo-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* Navigo is only shipped in Black weight by the brand — use it for display
+   headlines. For mid/regular weights in headlines, fall back to Poppins. */
+
+@font-face { font-family: "Poppins"; src: url("./fonts/Poppins-Light.ttf") format("truetype");      font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("./fonts/Poppins-Regular.ttf") format("truetype");    font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("./fonts/Poppins-Italic.ttf") format("truetype");     font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("./fonts/Poppins-Medium.ttf") format("truetype");     font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("./fonts/Poppins-SemiBold.ttf") format("truetype");   font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("./fonts/Poppins-Bold.ttf") format("truetype");       font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("./fonts/Poppins-BoldItalic.ttf") format("truetype"); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Poppins"; src: url("./fonts/Poppins-Black.ttf") format("truetype");      font-weight: 900; font-style: normal; font-display: swap; }
+
+:root {
+  /* ---------- BRAND COLORS ---------- */
+  /* Primary palette */
+  --sap-smart-orange:  #FF6F6F; /* logo accent / primary brand red-orange */
+  --sap-inno-mint:     #3ED3B1; /* fresh accent / secondary brand */
+  --sap-space-cadet:   #201E50; /* deep navy / secondary surface */
+  --sap-black-pro:     #12181E; /* primary dark surface */
+  --sap-cosmic-white:  #FFF9EA; /* warm off-white text on dark */
+
+  /* Signal colors (UI feedback only — never decorative) */
+  --sap-signal-error:    #FF4646; /* Chestnut Rose 100 */
+  --sap-signal-success:  #00FDC2; /* Mariner 100 */
+
+  /* Alternative gradient stops (warm pink → purple → near-black) */
+  --sap-grad-pink:    #D7ABA7;
+  --sap-grad-purple:  #4A3489;
+  --sap-grad-deep:    #0D0811;
+
+  /* ---------- SEMANTIC TOKENS ---------- */
+  /* Surfaces */
+  --bg-primary:   var(--sap-black-pro);
+  --bg-secondary: var(--sap-space-cadet);
+  --bg-tertiary:  var(--sap-cosmic-white);
+
+  /* Foreground (on dark) */
+  --fg-1: var(--sap-cosmic-white);              /* body & headlines */
+  --fg-2: rgba(255, 255, 255, 0.75);            /* secondary text */
+  --fg-3: rgba(255, 255, 255, 0.55);            /* tertiary / meta */
+  --fg-muted: rgba(255, 255, 255, 0.40);
+
+  /* Foreground (on light) */
+  --fg-1-on-light: var(--sap-black-pro);
+  --fg-2-on-light: rgba(18, 24, 30, 0.75);
+  --fg-3-on-light: rgba(18, 24, 30, 0.55);
+
+  /* Accents */
+  --accent:         var(--sap-smart-orange);
+  --accent-soft:    var(--sap-inno-mint);
+  --link:           var(--sap-smart-orange);
+
+  /* Card / container system (per brand guide) */
+  --card-fill:    rgba(255, 255, 255, 0.05);
+  --card-fill-2:  rgba(255, 255, 255, 0.06); /* hover top stop */
+  --card-fill-1:  rgba(255, 255, 255, 0.03); /* hover bottom stop */
+  --card-border:  rgba(255, 255, 255, 0.15);
+  --card-blur:    blur(40px);
+
+  /* ---------- RADII ---------- */
+  --r-sm: 4px;
+  --r-md: 8px;   /* buttons, small cards */
+  --r-lg: 16px;  /* default card radius — primary brand */
+  --r-xl: 24px;
+  --r-2xl: 44px; /* big container / full-page frames */
+  --r-pill: 999px;
+
+  /* ---------- SPACING (4px base, Poppins-friendly) ---------- */
+  --s-0:  0;
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  20px;
+  --s-6:  24px;
+  --s-7:  32px;
+  --s-8:  44px;
+  --s-9:  64px;
+  --s-10: 96px;
+  --s-11: 128px;
+
+  /* ---------- SHADOWS / ELEVATION ---------- */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.25);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.35);
+  --shadow-lg: 0 24px 60px rgba(0,0,0,0.45);
+  /* Inner glow for glass / card hover */
+  --shadow-inner-glow: inset 0 1px 0 rgba(255,255,255,0.08);
+
+  /* ---------- TYPE — FAMILIES ---------- */
+  --font-display: "Navigo", "Poppins", system-ui, -apple-system, sans-serif;
+  --font-body:    "Poppins", system-ui, -apple-system, sans-serif;
+  --font-mono:    ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* ---------- TYPE — SCALE (Desktop breakpoint, per Figma) ---------- */
+  /* Headlines use Navigo; line-height 120% */
+  --h1-size: 54px;  --h1-lh: 1.2;
+  --h2-size: 46px;  --h2-lh: 1.2;
+  --h3-size: 32px;  --h3-lh: 1.2;
+  --h4-size: 24px;  --h4-lh: 1.2;
+  --h5-size: 20px;  --h5-lh: 1.2;
+  --h6-size: 16px;  --h6-lh: 1.2;
+  --hs-size: 14px;  --hs-lh: 1.2;
+  --hxs-size: 12px; --hxs-lh: 1.2;
+
+  /* Body — Poppins, line-height 150% */
+  --body-m-size: 16px;  --body-m-lh: 1.5;
+  --body-s-size: 14px;  --body-s-lh: 1.5;
+  --body-xs-size: 12px; --body-xs-lh: 1.5;
+
+  /* Functional — buttons, forms, labels */
+  --btn-size: 16px;          --btn-lh: 1.2;
+  --btn-sm-size: 14px;       --btn-sm-lh: 1.5;
+  --btn-xs-size: 12px;       --btn-xs-lh: 1.5;
+  --form-size: 16px;         --form-lh: 1.2;
+  --form-sm-size: 14px;      --form-sm-lh: 1.2;
+  --label-size: 14px;        --label-lh: 1.2;
+
+  /* Overline */
+  --overline-size: 12px;
+  --overline-tracking: 0.5px;
+}
+
+/* ---------- BASE / RESET ---------- */
+html, body {
+  background: var(--bg-primary);
+  color: var(--fg-1);
+  font-family: var(--font-body);
+  font-size: var(--body-m-size);
+  line-height: var(--body-m-lh);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- TYPE CLASSES ---------- */
+.sap-h1, h1.sap, h1 { font-family: var(--font-display); font-weight: 900; font-size: var(--h1-size); line-height: var(--h1-lh); color: var(--fg-1); letter-spacing: -0.01em; }
+.sap-h2, h2.sap, h2 { font-family: var(--font-display); font-weight: 900; font-size: var(--h2-size); line-height: var(--h2-lh); color: var(--fg-1); letter-spacing: -0.01em; }
+.sap-h3, h3.sap, h3 { font-family: var(--font-display); font-weight: 900; font-size: var(--h3-size); line-height: var(--h3-lh); color: var(--fg-1); }
+.sap-h4, h4.sap, h4 { font-family: var(--font-display); font-weight: 900; font-size: var(--h4-size); line-height: var(--h4-lh); color: var(--fg-1); }
+.sap-h5, h5.sap, h5 { font-family: var(--font-display); font-weight: 900; font-size: var(--h5-size); line-height: var(--h5-lh); color: var(--fg-1); }
+.sap-h6, h6.sap, h6 { font-family: var(--font-display); font-weight: 900; font-size: var(--h6-size); line-height: var(--h6-lh); color: var(--fg-1); }
+
+.sap-body    { font-family: var(--font-body); font-size: var(--body-m-size);  line-height: var(--body-m-lh);  color: var(--fg-1); }
+.sap-body-s  { font-family: var(--font-body); font-size: var(--body-s-size);  line-height: var(--body-s-lh);  color: var(--fg-2); }
+.sap-body-xs { font-family: var(--font-body); font-size: var(--body-xs-size); line-height: var(--body-xs-lh); color: var(--fg-2); }
+
+.sap-overline {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--overline-size);
+  letter-spacing: var(--overline-tracking);
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+
+.sap-btn-text       { font-family: var(--font-body); font-weight: 700; font-size: var(--btn-size); line-height: var(--btn-lh); }
+.sap-btn-text-sm    { font-family: var(--font-body); font-weight: 700; font-size: var(--btn-sm-size); line-height: var(--btn-sm-lh); }
+.sap-btn-text-xs    { font-family: var(--font-body); font-weight: 700; font-size: var(--btn-xs-size); line-height: var(--btn-xs-lh); }
+.sap-label          { font-family: var(--font-body); font-weight: 500; font-size: var(--label-size); line-height: var(--label-lh); color: var(--fg-2); }
+.sap-form-text      { font-family: var(--font-body); font-weight: 400; font-size: var(--form-size); line-height: var(--form-lh); color: var(--fg-1); }
+
+/* ---------- BACKGROUND HELPERS ---------- */
+.sap-bg-primary    { background-color: var(--bg-primary); color: var(--fg-1); }
+.sap-bg-secondary  { background-color: var(--bg-secondary); color: var(--fg-1); }
+.sap-bg-tertiary   { background-color: var(--bg-tertiary); color: var(--fg-1-on-light); }
+
+/* Gradient backgrounds (image-backed, primary brand recipe) */
+.sap-bg-gradient-01 { background: url("./assets/gradient-01.jpg") center / cover no-repeat, var(--bg-secondary); color: var(--fg-1); }
+.sap-bg-gradient-03 { background: url("./assets/gradient-03.jpg") center / cover no-repeat, var(--bg-secondary); color: var(--fg-1); }
+.sap-bg-gradient-05 { background: url("./assets/gradient-05.png") center / cover no-repeat, var(--bg-secondary); color: var(--fg-1); }
+.sap-bg-gradient-06 { background: url("./assets/gradient-06.png") center / cover no-repeat, var(--bg-secondary); color: var(--fg-1); }
+
+/* Programmable / vector gradient fallback inspired by the palette */
+.sap-bg-gradient-clean {
+  background: linear-gradient(180deg, var(--sap-grad-pink) 0%, var(--sap-grad-purple) 46%, var(--sap-grad-deep) 100%);
+  color: var(--fg-1);
+}
+
+/* Noise overlay — apply as ::after on top of a gradient surface */
+.sap-noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("./assets/noise-keyvisual.png") center / cover no-repeat;
+  opacity: 0.65;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* ---------- CARD ---------- */
+.sap-card {
+  background-color: var(--card-fill);
+  border: 1px solid var(--card-border);
+  border-radius: var(--r-lg);
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
+  color: var(--fg-1);
+}
+.sap-card--hover, .sap-card:hover {
+  background: linear-gradient(180deg, var(--card-fill-1) 0%, var(--card-fill-2) 100%);
+}
+
+/* ---------- BUTTONS ---------- */
+.sap-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  padding: 14px 24px;
+  border-radius: var(--r-pill);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--btn-size);
+  line-height: var(--btn-lh);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 120ms ease;
+  text-decoration: none;
+}
+.sap-btn--primary {
+  background-color: var(--sap-smart-orange);
+  color: var(--sap-black-pro);
+}
+.sap-btn--primary:hover { background-color: var(--sap-cosmic-white); }
+.sap-btn--primary:active { transform: translateY(1px); }
+
+.sap-btn--secondary {
+  background-color: transparent;
+  color: var(--fg-1);
+  border-color: var(--card-border);
+}
+.sap-btn--secondary:hover { background-color: var(--card-fill); border-color: rgba(255,255,255,0.30); }
+
+.sap-btn--ghost {
+  background-color: transparent;
+  color: var(--fg-1);
+}
+.sap-btn--ghost:hover { color: var(--sap-smart-orange); }
+
+.sap-btn--sm { padding: 10px 18px; font-size: var(--btn-sm-size); }
+.sap-btn--xs { padding: 8px 14px; font-size: var(--btn-xs-size); }

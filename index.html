@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DDD Milano 2026 · SAPERED Field Report</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="atmosphere" aria-hidden="true"></div>
+<div class="shapes-layer" id="shapes-layer" aria-hidden="true"></div>
+
+<!-- Fixed brand header -->
+<header class="brand-header">
+  <a href="#hero" aria-label="SAPERED home">
+    <img class="sap-mark" src="assets/sapered-logo-icon-white.svg" alt="SAPERED" />
+  </a>
+  <div class="header-right">
+    <div class="meta">
+      <b>
+        <span data-l="en">Field Report</span><span data-l="de">Feldbericht</span>
+      </b>&nbsp;&nbsp;·&nbsp;&nbsp;<span data-l="en">DDD Milano 2026</span><span data-l="de">DDD Mailand 2026</span>
+    </div>
+    <div class="lang-switcher" role="group" aria-label="Language">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="de">DE</button>
+    </div>
+  </div>
+</header>
+
+<!-- Side dot navigation -->
+<nav class="dot-nav" aria-label="Section navigation">
+  <a href="#hero"       data-label="Opening"        data-label-en="Opening"          data-label-de="Eröffnung"></a>
+  <a href="#intro"      data-label="What is DDD"    data-label-en="What is DDD"      data-label-de="Was ist DDD"></a>
+  <a href="#venue"      data-label="Venue"          data-label-en="Venue"            data-label-de="Location"></a>
+  <a href="#numbers"    data-label="The Numbers"    data-label-en="The Numbers"      data-label-de="Die Zahlen"></a>
+  <a href="#vault"      data-label="DDD Vault"      data-label-en="DDD Vault"        data-label-de="DDD Vault"></a>
+  <a href="#speakers"   data-label="Speakers"       data-label-en="Speakers"         data-label-de="Speaker"></a>
+  <a href="#talks"      data-label="Top 5 Talks"    data-label-en="Top 5 Talks"      data-label-de="Top 5 Talks"></a>
+  <a href="#conclusion" data-label="Conclusion"     data-label-en="Conclusion"       data-label-de="Fazit"></a>
+  <a href="#q-clowes"   data-label="What Remains"   data-label-en="What Remains"     data-label-de="Was bleibt"></a>
+  <a href="#ld"         data-label="L&D Thought"    data-label-en="L&D Thought"      data-label-de="L&D-Gedanke"></a>
+</nav>
+
+<main>
+
+<!-- ============================================================
+     01 · HERO
+============================================================= -->
+<section class="hero" id="hero">
+  <div class="hero__bg" data-parallax="0"></div>
+  <div class="hero__veil"></div>
+  <div class="hero__noise"></div>
+
+  <div class="hero__inner">
+    <div class="hero__edition r r-up">
+      <span class="dot"></span>
+      <span data-l="en">10th Anniversary Edition</span><span data-l="de">10-jähriges Jubiläum</span>
+    </div>
+
+    <h1 class="hero__title r r-up" data-delay="120">
+      <span data-l="en">Digital Design Days<br/><em>Milano 2026</em></span><span data-l="de">Digital Design Days<br/><em>Mailand 2026</em></span>
+    </h1>
+
+    <div class="hero__meta r r-up" data-delay="260">
+      <span><span data-l="en">7 – 9 May 2026</span><span data-l="de">7. – 9. Mai 2026</span></span>
+      <span class="sep"></span>
+      <span>Superstudio Village</span>
+      <span class="sep"></span>
+      <span data-l="en">Milano</span><span data-l="de">Mailand</span>
+    </div>
+
+    <p class="hero__byline r r-up" data-delay="380">
+      <span data-l="en">A field report by <b>Magnus Pettersson</b></span><span data-l="de">Ein Feldbericht von <b>Magnus Pettersson</b></span>
+    </p>
+  </div>
+
+  <div class="hero__scroll">
+    <span data-l="en">Scroll</span><span data-l="de">Scrollen</span>
+    <span class="line"></span>
+  </div>
+</section>
+
+<!-- ============================================================
+     02 · WHAT IS DDD
+============================================================= -->
+<section id="intro">
+  <div class="wrap">
+    <div class="intro-stack">
+      <div class="a">
+        <div class="intro-eyebrow r r-up">
+          <span data-l="en">01 — Introduction</span><span data-l="de">01 — Einleitung</span>
+        </div>
+        <h2 class="intro-display r r-up" data-delay="80">
+          <span data-l="en">What is the<br/><em>Digital&nbsp;Design&nbsp;Days?</em></span><span data-l="de">Was sind die<br/><em>Digital&nbsp;Design&nbsp;Days?</em></span>
+        </h2>
+      </div>
+
+      <div class="b">
+        <p class="intro-lede r r-up" data-delay="200">
+          <span data-l="en">The annual global gathering of the digital design community — creatives, agencies, brands, startups, investors and emerging talent. <b>Now in its 10th year.</b></span><span data-l="de">Das jährliche globale Treffen der Digital-Design-Community — Kreative, Agenturen, Marken, Startups, Investor:innen und aufstrebende Talente. <b>Jetzt im 10. Jahr.</b></span>
+        </p>
+      </div>
+
+      <div class="c">
+        <div class="intro-focus">
+          <div class="intro-eyebrow r r-up" style="justify-content: center;">
+            <span data-l="en">This year's focus</span><span data-l="de">Schwerpunkt dieses Jahres</span>
+          </div>
+          <h3 class="r r-up" data-delay="80">
+            <span data-l="en">Not a technical question.<br/><em>A deeply human one.</em></span><span data-l="de">Keine technische Frage.<br/><em>Eine zutiefst menschliche.</em></span>
+          </h3>
+          <p class="r r-up" data-delay="160">
+            <span data-l="en">The overarching question of DDD 2026 was what AI means for creativity, craft and creative identity. Every talk circled back to it — some embracing full AI integration, others mourning the loss of process, others proposing practical frameworks for keeping the human layer relevant. The common thread: nobody has resolved it yet. <i>That collective searching was the atmosphere of the entire event.</i></span><span data-l="de">Die übergreifende Frage der DDD 2026 war, was KI für Kreativität, Handwerk und kreative Identität bedeutet. Jeder Talk kam darauf zurück — manche umarmten die volle KI-Integration, andere trauerten dem Verlust des Prozesses nach, wieder andere schlugen praktische Rahmen vor, um die menschliche Ebene relevant zu halten. Der rote Faden: niemand hat es bislang aufgelöst. <i>Diese kollektive Suche war die Atmosphäre des gesamten Events.</i></span>
+          </p>
+
+          <div class="intro-meta r r-up" data-delay="260">
+            <span>
+              <b><span data-l="en">3 days</span><span data-l="de">3 Tage</span></b>
+              <span data-l="en">7 – 9 May 2026</span><span data-l="de">7.–9. Mai 2026</span>
+            </span>
+            <span>
+              <b><span data-l="en">3 stages</span><span data-l="de">3 Bühnen</span></b>
+              Purple · Aqua · Open
+            </span>
+            <span>
+              <b><span data-l="en">~100 speakers</span><span data-l="de">~100 Speaker</span></b>
+              <span data-l="en">Across the programme</span><span data-l="de">Im gesamten Programm</span>
+            </span>
+            <span>
+              <b>Superstudio Village</b>
+              <span data-l="en">Bovisa, Milano</span><span data-l="de">Bovisa, Mailand</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PULL QUOTE — Sagmeister
+============================================================= -->
+<aside class="pull" id="q-sagmeister-intro">
+  <div class="pull__inner">
+    <div class="pull__topic r r-up">
+      <span data-l="en">Takeaway · Craft as differentiator</span><span data-l="de">Erkenntnis · Handwerk als Unterscheidungsmerkmal</span>
+    </div>
+    <p class="pull__quote r r-blur" data-delay="120">
+      "Things are beautiful because the people who made it <span class="accent">gave a shit</span>."
+    </p>
+    <div class="pull__cite r r-up" data-delay="280">
+      — <b>Stefan Sagmeister</b> · Sagmeister Inc.
+    </div>
+  </div>
+</aside>
+
+<!-- ============================================================
+     03 · VENUE
+============================================================= -->
+<section id="venue" style="padding-bottom: 0;">
+  <div class="wrap venue-intro">
+    <div class="overline r r-up">
+      <span data-l="en">02 — Venue Impressions</span><span data-l="de">02 — Eindrücke vom Veranstaltungsort</span>
+    </div>
+    <h2 class="r r-up" data-delay="80">Superstudio Village, Bovisa</h2>
+    <p class="r r-up" data-delay="160">
+      <span data-l="en">A former industrial complex in Milano's Bovisa district — completely modernised and painted white. <b>4,000+ attendees</b> across three days. A refreshingly balanced crowd — roughly 50/50 men and women.</span><span data-l="de">Ein ehemaliger Industriekomplex im Mailänder Stadtteil Bovisa — komplett modernisiert und weiß gestrichen. <b>4.000+ Teilnehmer:innen</b> an drei Tagen. Ein erfrischend ausgewogenes Publikum — etwa 50/50 Männer und Frauen.</span>
+    </p>
+  </div>
+
+  <div class="h-scroll">
+    <div class="h-scroll__pin">
+      <div class="h-scroll__count">
+        <span data-l="en">Frame</span><span data-l="de">Bild</span>
+        <b>01</b> / 07
+      </div>
+      <div class="h-scroll__track">
+        <figure class="h-scroll__card" style="width: 70vw;">
+          <img src="assets/venue/IMG_0236.JPG" alt="Superstudio entrance" loading="lazy" />
+          <div class="meta"><b>01</b> &nbsp; <span data-l="en">Arrival · Exterior</span><span data-l="de">Ankunft · Außenbereich</span></div>
+        </figure>
+        <figure class="h-scroll__card" style="width: 55vw;">
+          <img src="assets/venue/IMG_0808.JPG" alt="" loading="lazy" />
+          <div class="meta"><b>02</b> &nbsp; <span data-l="en">Industrial bones</span><span data-l="de">Industrielle Substanz</span></div>
+        </figure>
+        <figure class="h-scroll__card" style="width: 65vw;">
+          <img src="assets/venue/IMG_0257.JPG" alt="" loading="lazy" />
+          <div class="meta"><b>03</b> &nbsp; <span data-l="en">Interior · Stage</span><span data-l="de">Innenraum · Bühne</span></div>
+        </figure>
+        <figure class="h-scroll__card" style="width: 50vw;">
+          <img src="assets/venue/IMG_0317.JPG" alt="" loading="lazy" />
+          <div class="meta"><b>04</b> &nbsp; <span data-l="en">Between sessions</span><span data-l="de">Zwischen den Sessions</span></div>
+        </figure>
+        <figure class="h-scroll__card" style="width: 70vw;">
+          <img src="assets/venue/EQ1A6832.jpg" alt="" loading="lazy" />
+          <div class="meta"><b>05</b> &nbsp; <span data-l="en">Interior · Crowd</span><span data-l="de">Innenraum · Publikum</span></div>
+        </figure>
+        <figure class="h-scroll__card" style="width: 60vw;">
+          <img src="assets/venue/EQ1A6712.jpg" alt="" loading="lazy" />
+          <div class="meta"><b>06</b> &nbsp; <span data-l="en">Open courtyard</span><span data-l="de">Offener Innenhof</span></div>
+        </figure>
+        <figure class="h-scroll__card" style="width: 58vw;">
+          <img src="assets/venue/IMG_0678.JPG" alt="" loading="lazy" />
+          <div class="meta"><b>07</b> &nbsp; <span data-l="en">Festival corridors</span><span data-l="de">Festivalgänge</span></div>
+        </figure>
+      </div>
+      <div class="h-scroll__progress"><span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     04 · NUMBERS
+============================================================= -->
+<section id="numbers" class="numbers">
+  <div class="wrap">
+    <div class="overline r r-up" style="display:block; text-align:center;">
+      <span data-l="en">03 — The Numbers</span><span data-l="de">03 — Die Zahlen</span>
+    </div>
+    <h2 class="r r-up" data-delay="80">
+      <span data-l="en">A festival, in four figures.</span><span data-l="de">Ein Festival in vier Zahlen.</span>
+    </h2>
+
+    <div class="numbers-grid">
+      <div class="num r r-up">
+        <div class="num__big">10</div>
+        <div class="num__label">
+          <span data-l="en">Years of DDD<br/>10th Anniversary</span><span data-l="de">Jahre DDD<br/>10-jähriges Jubiläum</span>
+        </div>
+      </div>
+      <div class="num r r-up" data-delay="120">
+        <div class="num__big">4,000<sup>+</sup></div>
+        <div class="num__label">
+          <span data-l="en">Attendees<br/>across 3 days</span><span data-l="de">Teilnehmer:innen<br/>an 3 Tagen</span>
+        </div>
+      </div>
+      <div class="num r r-up" data-delay="240">
+        <div class="num__big">100<sup>+</sup></div>
+        <div class="num__label">
+          <span data-l="en">Speakers<br/>on the programme</span><span data-l="de">Speaker<br/>im Programm</span>
+        </div>
+      </div>
+      <div class="num r r-up" data-delay="360">
+        <div class="num__big">3</div>
+        <div class="num__label">
+          <span data-l="en">Stages<br/>Purple · Aqua · Open</span><span data-l="de">Bühnen<br/>Purple · Aqua · Open</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     05 · PULL QUOTE — Jonas Lempa
+============================================================= -->
+<aside class="pull pull--with-image" id="q-pricing">
+  <div class="pull__inner">
+    <div>
+      <div class="pull__topic r r-up">
+        <span data-l="en">Takeaway · Pricing & Value</span><span data-l="de">Erkenntnis · Preis & Wert</span>
+      </div>
+      <p class="pull__quote r r-up" data-delay="120" style="font-size: clamp(28px, 4vw, 52px);">
+        "Time is no longer money. <span class="accent">Stop charging production time. Start selling value.</span> Move from execution to enablement."
+      </p>
+      <div class="pull__cite r r-up" data-delay="260">
+        — <b>Jonas Lempa</b> · Taikonauten
+      </div>
+    </div>
+    <div class="pull__img r r-scale">
+      <img src="assets/speakers/IMG_0474.JPG" alt="Jonas Lempa on stage" data-parallax="0.05" loading="lazy" />
+    </div>
+  </div>
+</aside>
+
+<!-- ============================================================
+     06 · DDD VAULT
+============================================================= -->
+<section id="vault" class="vault">
+  <div class="wrap">
+    <div class="vault__grid">
+      <div class="vault__copy">
+        <div class="overline r r-right">
+          <span data-l="en">04 — Installation</span><span data-l="de">04 — Installation</span>
+        </div>
+        <h2 class="r r-right" data-delay="80">DDD <em>Vault</em></h2>
+        <div class="vault__credit r r-right" data-delay="160">
+          <span data-l="en">Rare Volume · Robert Hodgin · in collaboration with Cinder</span><span data-l="de">Rare Volume · Robert Hodgin · in Zusammenarbeit mit Cinder</span>
+        </div>
+        <p class="r r-right" data-delay="220">
+          <span data-l="en">A darkened room, a roughly <b>3×3m LED wall</b>, and ten years of DDD talk archives navigable through an interactive 3D interface. Visitors could sit, pan, scale and land on any word — and instantly see every moment across the decade where that word was spoken, in context, in the video.</span><span data-l="de">Ein abgedunkelter Raum, eine etwa <b>3×3m große LED-Wand</b> und zehn Jahre DDD-Talk-Archive, navigierbar über ein interaktives 3D-Interface. Besucher:innen konnten sich hinsetzen, panen, skalieren und auf jedem Wort landen — und sofort jeden Moment der vergangenen Dekade sehen, in dem dieses Wort gesprochen wurde, im Kontext, im Video.</span>
+        </p>
+        <p class="r r-right" data-delay="320">
+          <span data-l="en">1.2M+ words. Ten years of ideas. A love letter to an archive that until now had nowhere to actually live.</span><span data-l="de">1,2 Mio.+ Wörter. Zehn Jahre Ideen. Ein Liebesbrief an ein Archiv, das bisher nirgendwo wirklich zu Hause war.</span>
+        </p>
+        <blockquote class="vault__quote r r-up" data-delay="380">
+          <p>"A living archive that you can actually explore, pan through, scale data, land on a word like <i>design</i>, and instantly see every moment across ten years where that word was spoken — in context, in the video, exactly when it was said."</p>
+          <cite>— Robert Hodgin · Rare Volume</cite>
+        </blockquote>
+      </div>
+
+      <div class="vault__imgs">
+        <div class="v-img v1 r r-scale" data-parallax="0.05">
+          <img src="assets/vault/EQ1A6840.jpg" alt="DDD Vault installation" loading="lazy" />
+        </div>
+        <div class="v-img v2 r r-up" data-delay="160" data-parallax="-0.04">
+          <img src="assets/vault/EQ1A6825.jpg" alt="" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     07 · PULL QUOTE — Two Flints
+============================================================= -->
+<aside class="pull pull--with-image" id="q-flints">
+  <div class="pull__inner">
+    <div class="pull__img r r-scale">
+      <img src="assets/speakers/IMG_0332.JPG" alt="Nils Landrodie" data-parallax="0.05" loading="lazy" />
+    </div>
+    <div>
+      <div class="pull__topic r r-up">
+        <span data-l="en">Takeaway · Collaboration</span><span data-l="de">Erkenntnis · Zusammenarbeit</span>
+      </div>
+      <p class="pull__quote r r-up" data-delay="120">
+        "The spark still needs <span class="accent">two flints</span>."
+      </p>
+      <div class="pull__cite r r-up" data-delay="260">
+        — <b>Nils Landrodie</b> · Makemepulse
+      </div>
+      <p class="r r-up" data-delay="340" style="margin-top: 36px; font-size: 16px; line-height: 1.6; color: var(--fg-2); max-width: 460px;">
+        <span data-l="en">Real creative collaboration requires friction, emotion, genuine disagreement — the discomfort of two different minds pressing against each other. AI produces responses. It does not push back.</span><span data-l="de">Echte kreative Zusammenarbeit braucht Reibung, Emotion, echte Meinungsverschiedenheit — das Unbehagen zweier unterschiedlicher Köpfe, die aneinander drücken. KI produziert Antworten. Sie widerspricht nicht.</span>
+      </p>
+    </div>
+  </div>
+</aside>
+
+<!-- ============================================================
+     08 · SPEAKERS
+============================================================= -->
+<section id="speakers">
+  <div class="wrap">
+    <div class="speakers__head">
+      <div>
+        <div class="overline r r-up">
+          <span data-l="en">05 — Programme</span><span data-l="de">05 — Programm</span>
+        </div>
+        <h2 class="r r-up" data-delay="80">
+          <span data-l="en">Speakers</span><span data-l="de">Speaker</span>
+          <em style="color: var(--fg-3); font-weight:900; font-family:var(--font-display);">
+            · <span data-l="en">3 days</span><span data-l="de">3 Tage</span>
+          </em>
+        </h2>
+      </div>
+      <div class="speakers__legend r r-up" data-delay="160">
+        <span class="swatch"></span>
+        <span data-l="en">Magnus' Top 5</span><span data-l="de">Magnus' Top 5</span>
+      </div>
+    </div>
+
+    <!-- DAY 1 -->
+    <div class="day r r-up">
+      <div class="day__head">
+        <span class="day__num">
+          <span data-l="en">Day 01</span><span data-l="de">Tag 01</span>
+        </span>
+        <span class="day__date">
+          <span data-l="en">Thursday 7 May</span><span data-l="de">Donnerstag, 7. Mai</span>
+        </span>
+        <span class="day__weekday">
+          <span data-l="en">Opening</span><span data-l="de">Eröffnung</span>
+        </span>
+      </div>
+      <div class="tags">
+        <span class="tag">Filippo Spiezia<span class="co"> · <span data-l="en">DDD Founder · Opening</span><span data-l="de">DDD-Gründer · Eröffnung</span></span></span>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/itay-schiff/">Itay Schiff<span class="co"> · Figma Weave</span></a>
+        <a class="tag top" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/robert-hodgin/">Robert Hodgin<span class="co"> · Rare Volume</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/felix-chilvers/">Felix Chilvers<span class="co"> · Future Deluxe</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/daan-klaver/">Daan Klaver<span class="co"> · Build in Amsterdam</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/nicolas-neubert/">Nicolas Neubert<span class="co"> · Runway</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/marta-krol-jakub-grobelny/">Marta Krol & Jakub Grobelny<span class="co"> · Ars Thanea</span></a>
+        <a class="tag top" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/nils-landrodie/">Nils Landrodie<span class="co"> · Makemepulse</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/chiara-diana/">Chiara Diana<span class="co"> · frog</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/phillip-maggs/">Phillip Maggs<span class="co"> · Superside</span></a>
+        <a class="tag top" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/emily-rickard/">Emily Rickard<span class="co"> · Buck</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/thomas-mueller/">Thomas Mueller<span class="co"> · Accenture Song</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/ilenia-notarangelo-arianna-cristiano/">Ilenia Notarangelo & Arianna Cristiano<span class="co"> · ILLO</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/vera-maria-glahn/">Vera-Maria Glahn<span class="co"> · Tender Edge</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/michele-zorzetto-ivan-zambanello/">Michele Zorzetto & Ivan Zambanello<span class="co"> · AQUEST</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/gabriele-rossi/">Gabriele Rossi<span class="co"> · Accurat</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/francesco-marzoli/">Francesco Marzoli<span class="co"> · Sileent</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/ace-spagni-aka-aclas/">Ace Spagni (ACLAS)<span class="co"> · Cuadro</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/stefano-caliandro/">Stefano Caliandro<span class="co"> · StudioGusto</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/caffe-design/">Caffè Design</a>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day r r-up">
+      <div class="day__head">
+        <span class="day__num">
+          <span data-l="en">Day 02</span><span data-l="de">Tag 02</span>
+        </span>
+        <span class="day__date">
+          <span data-l="en">Friday 8 May</span><span data-l="de">Freitag, 8. Mai</span>
+        </span>
+        <span class="day__weekday">
+          <span data-l="en">Main Day</span><span data-l="de">Haupttag</span>
+        </span>
+      </div>
+      <div class="tags">
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/gleb-kuznetsov/">Gleb Kuznetsov<span class="co"> · Milkinside</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/guillermo-flores-pacheco/">Guillermo Flores Pacheco<span class="co"> · ORBEH STUDIO</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/jonas-lempa/">Jonas Lempa<span class="co"> · Taikonauten</span></a>
+        <a class="tag top" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/marcel-ziul/">Marcel Ziul<span class="co"> · State</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/andrea-navone-naoki-tanaka/">Pascal Rotteveel & Andrea Navone<span class="co"> · Dentsu Lab</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/michael-modena/">Michael Modena<span class="co"> · Forged</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/valentino-magliaro/">Valentino Magliaro<span class="co"> · Canva</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/anrick-bregman/">Anrick Bregman<span class="co"> · Anrk & OHI! Studio</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/mason-nicoll/">Mason Nicoll<span class="co"> · Digital Kitchen</span></a>
+        <a class="tag top" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/stefan-sagmeister/">Stefan Sagmeister<span class="co"> · Sagmeister Inc.</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/simon-clowes/">Simon Clowes<span class="co"> · Apple</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/wesley-ter-haar/">Wesley ter Haar<span class="co"> · Monks</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/valentina-culatti/">Valentina Culatti<span class="co"> · Snapchat</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/francesco-bernabei/">Francesco Bernabei<span class="co"> · Monogrid</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/matteo-bonera/">Matteo Bonera<span class="co"> · The Visual Agency</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/david-ronhel/">David Ronhel<span class="co"> · HKI.Paris</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/clive-k-lavery/">Clive K. Lavery<span class="co"> · Independent</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/paola-rocchetti/">Paola Rocchetti<span class="co"> · Void N'Disorder</span></a>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day r r-up">
+      <div class="day__head">
+        <span class="day__num">
+          <span data-l="en">Day 03</span><span data-l="de">Tag 03</span>
+        </span>
+        <span class="day__date">
+          <span data-l="en">Saturday 9 May</span><span data-l="de">Samstag, 9. Mai</span>
+        </span>
+        <span class="day__weekday">
+          <span data-l="en">Closing</span><span data-l="de">Abschluss</span>
+        </span>
+      </div>
+      <div class="tags">
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/pj-richardson/">PJ Richardson<span class="co"> · Laundry</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/adriano-esteves/">Adriano Esteves<span class="co"> · Burocratik</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/luigi-de-rosa-emiel-van-betsbrugge/">Luigi De Rosa & Emiel Van Betsbrugge<span class="co"> · Active Theory</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/simon-clowes/">Simon Clowes<span class="co"> · Apple</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/marcus-wendt/">Marcus Wendt<span class="co"> · Field</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/yates-buckley/">Yates Buckley<span class="co"> · UNIT9</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/remy-williams/">Remy Williams<span class="co"> · Fluent Studio</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/dilshan-arukatti/">Dilshan Arukatti<span class="co"> · Immersive Garden</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/marina-willer/">Marina Willer<span class="co"> · Pentagram</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/wesley-ter-haar/">Wesley ter Haar<span class="co"> · Monks</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/ferdi-alici/">Ferdi Alici<span class="co"> · Ouchhh</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/lorenzo-cordioli/">Lorenzo Cordioli<span class="co"> · MACHINEZERO</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/valeria-monteiro/">Valeria Moreiro<span class="co"> · Not Real</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/camilla-brossa/">Camilla Brossa<span class="co"> · CAIA Consulting</span></a>
+        <a class="tag" target="_blank" rel="noopener" href="https://milano.ddd.live/program/speakers/violetta-zironi/">Violetta Zironi</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     09 · TOP 5 TALKS
+============================================================= -->
+<section id="talks" class="talks">
+  <div class="wrap">
+    <div class="talks__head">
+      <div class="overline r r-up">
+        <span data-l="en">06 — Favourites</span><span data-l="de">06 — Favoriten</span>
+      </div>
+      <h2 class="r r-up" data-delay="80">
+        <span data-l="en">Top 5<br/>Favourite Talks.</span><span data-l="de">Top 5<br/>Lieblings-Talks.</span>
+      </h2>
+      <p class="r r-up" data-delay="160">
+        <span data-l="en">Five talks that landed harder than the rest. Listed in chronological order, not ranked. What they share: each was personal, honest, and willing to sit inside the uncertainty rather than resolve it.</span><span data-l="de">Fünf Talks, die mehr Eindruck gemacht haben als die anderen. Chronologisch geordnet, nicht gewertet. Was sie gemeinsam haben: jeder war persönlich, ehrlich und bereit, in der Unsicherheit zu verweilen, statt sie aufzulösen.</span>
+      </p>
+    </div>
+
+    <!-- 01 Robert Hodgin -->
+    <article class="talk">
+      <div class="talk__media r r-scale">
+        <img src="assets/speakers/IMG_0276.JPG" alt="Robert Hodgin" data-parallax="0.04" loading="lazy" />
+        <div class="num-mark">01 / 05</div>
+        <div class="speaker-label">
+          <span class="name">Robert<br/>Hodgin</span>
+          <span class="co">Rare Volume</span>
+        </div>
+      </div>
+      <div class="talk__copy">
+        <div class="overline r r-up">
+          <span data-l="en">Day 01 · Art After Automation</span><span data-l="de">Tag 01 · Art After Automation</span>
+        </div>
+        <h3 class="r r-up" data-delay="80">
+          <span data-l="en">The most emotionally honest account of what AI <em style="color:var(--sap-smart-orange); font-style:normal;">actually feels like</em> for a working artist.</span><span data-l="de">Die emotional ehrlichste Schilderung dessen, wie sich KI <em style="color:var(--sap-smart-orange); font-style:normal;">tatsächlich anfühlt</em> für einen arbeitenden Künstler.</span>
+        </h3>
+        <ul class="talk__bullets r r-up" data-delay="160">
+          <li><span data-l="en">Nearly four decades of generative art — Hodgin's career arc gave the talk weight no younger speaker could match.</span><span data-l="de">Fast vier Jahrzehnte generative Kunst — Hodgins Werdegang verlieh dem Talk ein Gewicht, das kein jüngerer Speaker erreichen konnte.</span></li>
+          <li><span data-l="en">Built the DDD Vault installation: ten years of talks, 1.2M+ words, navigable in 3D — a love letter to the archive.</span><span data-l="de">Hat die DDD-Vault-Installation gebaut: zehn Jahre Talks, 1,2 Mio.+ Wörter, navigierbar in 3D — ein Liebesbrief an das Archiv.</span></li>
+          <li><span data-l="en">The still-life project: a Midjourney image that would have taken years to build in Houdini — beautiful, instant, completely hollow. <b>If the process disappears, how do we ever get better?</b></span><span data-l="de">Das Stillleben-Projekt: ein Midjourney-Bild, das in Houdini Jahre gebraucht hätte — schön, sofort verfügbar, völlig hohl. <b>Wenn der Prozess verschwindet, wie werden wir je besser?</b></span></li>
+        </ul>
+        <blockquote class="talk__quote r r-up" data-delay="240">
+          <p>"I know that I could skip all the suffering and get right to the dopamine hit. And now that I've made it, it just feels so disposable. It doesn't feel like it's mine."</p>
+          <cite>— Robert Hodgin</cite>
+        </blockquote>
+      </div>
+    </article>
+
+    <!-- 02 Sagmeister -->
+    <article class="talk">
+      <div class="talk__media r r-scale">
+        <img src="assets/speakers/EQ1A6868.jpg" alt="Stefan Sagmeister" data-parallax="0.04" loading="lazy" />
+        <div class="num-mark">02 / 05</div>
+        <div class="speaker-label">
+          <span class="name">Stefan<br/>Sagmeister</span>
+          <span class="co">Sagmeister Inc.</span>
+        </div>
+      </div>
+      <div class="talk__copy">
+        <div class="overline r r-up">
+          <span data-l="en">Day 02 · Beauty as Function</span><span data-l="de">Tag 02 · Beauty as Function</span>
+        </div>
+        <h3 class="r r-up" data-delay="80">
+          <span data-l="en">A study of bad design as the result of <em style="color:var(--sap-smart-orange); font-style:normal;">indifference</em>, not ignorance.</span><span data-l="de">Eine Studie über schlechtes Design als Folge von <em style="color:var(--sap-smart-orange); font-style:normal;">Gleichgültigkeit</em>, nicht Unwissenheit.</span>
+        </h3>
+        <ul class="talk__bullets r r-up" data-delay="160">
+          <li><span data-l="en">Live audience experiment with shapes and colours — proved empirically that beauty has universal truths, not just personal preference.</span><span data-l="de">Live-Experiment mit dem Publikum, mit Formen und Farben — empirisch bewiesen, dass Schönheit universelle Wahrheiten hat, nicht nur persönliche Präferenz.</span></li>
+          <li><span data-l="en">The least beautiful thing: a brown rectangle. Then the punchline — why are most buildings in the world brown rectangles?</span><span data-l="de">Das unschönste Ding: ein braunes Rechteck. Dann die Pointe — warum sind die meisten Gebäude der Welt braune Rechtecke?</span></li>
+          <li><span data-l="en">A call for creative accountability. Beauty as the visible evidence that someone cared.</span><span data-l="de">Ein Aufruf zu kreativer Verantwortung. Schönheit als sichtbarer Beweis, dass es jemandem wichtig war.</span></li>
+        </ul>
+        <blockquote class="talk__quote r r-up" data-delay="240">
+          <p>"Things are beautiful because the people who made it gave a shit."</p>
+          <cite>— Stefan Sagmeister</cite>
+        </blockquote>
+      </div>
+    </article>
+
+    <!-- 03 Marcel Ziul -->
+    <article class="talk">
+      <div class="talk__media r r-scale">
+        <img src="assets/speakers/IMG_0496.JPG" alt="Marcel Ziul" data-parallax="0.04" loading="lazy" />
+        <div class="num-mark">03 / 05</div>
+        <div class="speaker-label">
+          <span class="name">Marcel<br/>Ziul</span>
+          <span class="co">State</span>
+        </div>
+      </div>
+      <div class="talk__copy">
+        <div class="overline r r-up">
+          <span data-l="en">Day 02 · Chaos</span><span data-l="de">Tag 02 · Chaos</span>
+        </div>
+        <h3 class="r r-up" data-delay="80">
+          <span data-l="en">No framework, no tools — just a person being <em style="color:var(--sap-smart-orange); font-style:normal;">real</em> on stage.</span><span data-l="de">Kein Framework, keine Tools — nur ein Mensch, der auf der Bühne <em style="color:var(--sap-smart-orange); font-style:normal;">echt</em> ist.</span>
+        </h3>
+        <ul class="talk__bullets r r-up" data-delay="160">
+          <li><span data-l="en">A deeply personal journey through his relationship with inner disorder and unpredictability.</span><span data-l="de">Eine zutiefst persönliche Reise durch seine Beziehung zu innerer Unordnung und Unvorhersehbarkeit.</span></li>
+          <li><span data-l="en">Argued creative chaos is not a liability to be managed — it is the source of creative fuel.</span><span data-l="de">Argumentierte, dass kreatives Chaos kein zu managendes Risiko ist — es ist die Quelle des kreativen Treibstoffs.</span></li>
+          <li><span data-l="en">One of the most vulnerable and honest talks of the festival.</span><span data-l="de">Einer der verletzlichsten und ehrlichsten Talks des Festivals.</span></li>
+        </ul>
+        <blockquote class="talk__quote r r-up" data-delay="240">
+          <p>"Is my inner chaos my problem — or is it my power?"</p>
+          <cite>— Marcel Ziul</cite>
+        </blockquote>
+      </div>
+    </article>
+
+    <!-- 04 Nils Landrodie -->
+    <article class="talk">
+      <div class="talk__media r r-scale">
+        <img src="assets/speakers/IMG_0325.JPG" alt="Nils Landrodie" data-parallax="0.04" loading="lazy" />
+        <div class="num-mark">04 / 05</div>
+        <div class="speaker-label">
+          <span class="name">Nils<br/>Landrodie</span>
+          <span class="co">Makemepulse</span>
+        </div>
+      </div>
+      <div class="talk__copy">
+        <div class="overline r r-up">
+          <span data-l="en">Day 01 · Two Flints</span><span data-l="de">Tag 01 · Two Flints</span>
+        </div>
+        <h3 class="r r-up" data-delay="80">
+          <span data-l="en">Friction within a team is not a problem — <em style="color:var(--sap-smart-orange); font-style:normal;">it's the fuel</em>.</span><span data-l="de">Reibung im Team ist kein Problem — <em style="color:var(--sap-smart-orange); font-style:normal;">sie ist der Treibstoff</em>.</span>
+        </h3>
+        <ul class="talk__bullets r r-up" data-delay="160">
+          <li><span data-l="en">The best creative results happen in genuine collaboration; the discomfort of two minds pressing against each other.</span><span data-l="de">Die besten kreativen Ergebnisse entstehen in echter Zusammenarbeit; im Unbehagen zweier Köpfe, die aneinander drücken.</span></li>
+          <li><span data-l="en">AI is not a good collaborator: it doesn't push back, has no emotional stake, can't truly disagree.</span><span data-l="de">KI ist kein guter Kollaborateur: sie widerspricht nicht, hat keinen emotionalen Einsatz, kann nicht wirklich anderer Meinung sein.</span></li>
+          <li><span data-l="en">AI is a tool for going faster and exploring further — but the spark requires two real minds, not one mind and a machine.</span><span data-l="de">KI ist ein Werkzeug, um schneller voranzukommen und weiter zu erkunden — aber der Funke braucht zwei echte Köpfe, nicht einen Kopf und eine Maschine.</span></li>
+        </ul>
+        <blockquote class="talk__quote r r-up" data-delay="240">
+          <p>"The spark still needs two flints."</p>
+          <cite>— Nils Landrodie</cite>
+        </blockquote>
+      </div>
+    </article>
+
+    <!-- 05 Emily Rickard -->
+    <article class="talk">
+      <div class="talk__media r r-scale">
+        <img src="assets/speakers/IMG_0433.JPG" alt="Emily Rickard" data-parallax="0.04" loading="lazy" />
+        <div class="num-mark">05 / 05</div>
+        <div class="speaker-label">
+          <span class="name">Emily<br/>Rickard</span>
+          <span class="co">Buck</span>
+        </div>
+      </div>
+      <div class="talk__copy">
+        <div class="overline r r-up">
+          <span data-l="en">Day 01 · Empowering Creativity</span><span data-l="de">Tag 01 · Empowering Creativity</span>
+        </div>
+        <h3 class="r r-up" data-delay="80">
+          <span data-l="en">A grounded, authentic leadership voice — committed to the <em style="color:var(--sap-smart-orange); font-style:normal;">right questions</em>, not the easy answers.</span><span data-l="de">Eine geerdete, authentische Führungsstimme — den <em style="color:var(--sap-smart-orange); font-style:normal;">richtigen Fragen</em> verpflichtet, nicht den einfachen Antworten.</span>
+        </h3>
+        <ul class="talk__bullets r r-up" data-delay="160">
+          <li><span data-l="en">CEO of Buck, one of the world's most respected motion design studios — speaking about creativity and leadership in an uncertain moment.</span><span data-l="de">CEO von Buck, einem der weltweit angesehensten Motion-Design-Studios — sprach über Kreativität und Führung in einem unsicheren Moment.</span></li>
+          <li><span data-l="en">Deeply personal in tone — the human honesty was what made it a favourite; a contrast to the more system-oriented talks of the day.</span><span data-l="de">Zutiefst persönlich im Ton — die menschliche Ehrlichkeit machte ihn zu einem Favoriten; ein Kontrast zu den eher systemorientierten Talks des Tages.</span></li>
+          <li><span data-l="en">Not pretending to have answers, but unmistakably committed to the right questions.</span><span data-l="de">Tat nicht so, als hätte sie Antworten — aber war unmissverständlich den richtigen Fragen verpflichtet.</span></li>
+        </ul>
+        <blockquote class="talk__quote r r-up" data-delay="240">
+          <p>"Personal. Honest. Exactly what the room needed."</p>
+          <cite>— Emily Rickard</cite>
+        </blockquote>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================
+     10 · CONCLUSION
+============================================================= -->
+<section id="conclusion">
+  <div class="wrap">
+    <div class="conclusion__head">
+      <div class="overline r r-up">
+        <span data-l="en">07 — Personal conclusion</span><span data-l="de">07 — Persönliches Fazit</span>
+      </div>
+      <h2 class="r r-up" data-delay="80">
+        <span data-l="en">A festival defined by <em style="color:var(--sap-smart-orange); font-style:normal;">collective searching.</em></span><span data-l="de">Ein Festival, geprägt von <em style="color:var(--sap-smart-orange); font-style:normal;">kollektiver Suche.</em></span>
+      </h2>
+      <p class="lead r r-up" data-delay="160">
+        <span data-l="en">Not anxiety, not celebration — searching. The entire industry, from legends like Sagmeister and Hodgin to young freelancers in the crowd, is navigating the same fundamental uncertainty about what AI means for creative practice and creative identity.</span><span data-l="de">Keine Angst, keine Feier — Suche. Die gesamte Branche, von Legenden wie Sagmeister und Hodgin bis zu jungen Freelancer:innen im Publikum, navigiert dieselbe grundsätzliche Unsicherheit darüber, was KI für kreative Praxis und Identität bedeutet.</span>
+      </p>
+    </div>
+
+    <div class="conclusion__body">
+      <div class="r r-up">
+        <p>
+          <span data-l="en">What stood out most: the talks that mattered were all <b>deeply personal</b>. Not frameworks or product demos — but people being honest about what it's actually like to make things in 2026.</span><span data-l="de">Was am meisten herausstach: die Talks, die zählten, waren alle <b>zutiefst persönlich</b>. Keine Frameworks oder Produktdemos — sondern Menschen, die ehrlich darüber sprachen, wie es sich wirklich anfühlt, 2026 Dinge zu erschaffen.</span>
+        </p>
+
+        <blockquote class="vault__quote" style="margin: 8px 0 8px;">
+          <p style="font-size: 19px;">"The DDD feels a bit like a designers' self-help group. And we all need a big group hug."</p>
+          <cite>— Magnus Pettersson</cite>
+        </blockquote>
+      </div>
+
+      <div class="r r-up" data-delay="120">
+        <p>
+          <span data-l="en">Tools are lowering the floor for everyone. The ceiling — the quality of the best work — is still defined entirely by human taste, judgement and commitment. <b>AI levels the baseline; what stands above it is craft.</b></span><span data-l="de">KI Tools heben den Boden für alle. Die Decke — die Qualität der besten Arbeit — wird weiterhin vollständig durch menschlichen Geschmack, Urteilsvermögen und Hingabe definiert. KI nivelliert die Grundlinie; darüber steht das Handwerk.</span>
+        </p>
+        <p>
+          <span data-l="en">The talks that mattered weren't the ones with the cleanest frameworks. They were the ones where someone stood on stage and admitted they didn't have it figured out yet — and made the case for sitting inside that uncertainty rather than rushing to resolve it.</span><span data-l="de">Die Talks, die zählten, waren nicht die mit den saubersten Frameworks. Sondern die, in denen jemand auf der Bühne stand und zugab, es noch nicht durchschaut zu haben — und dafür plädierte, in dieser Unsicherheit zu verweilen, statt sie hastig aufzulösen.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11 · PULL QUOTE — Simon Clowes
+============================================================= -->
+<aside class="pull" id="q-clowes">
+  <div class="pull__inner">
+    <div class="pull__topic r r-up">
+      <span data-l="en">Takeaway · Visible work moves to AI</span><span data-l="de">Erkenntnis · Sichtbare Arbeit wandert zur KI</span>
+    </div>
+    <p class="pull__quote r r-blur" data-delay="120">
+      "What remains? <span class="accent">Timing, judgement, sequencing, taste, standards</span> — that is entirely human."
+    </p>
+    <div class="pull__cite r r-up" data-delay="280">
+      — <b>Simon Clowes</b> · Apple
+    </div>
+  </div>
+</aside>
+
+<!-- ============================================================
+     12 · L&D THOUGHT
+============================================================= -->
+<section id="ld">
+  <div class="wrap">
+    <div class="ld__head">
+      <div class="overline r r-up">
+        <span data-l="en">08 — Thought · L&D & Work Quality</span><span data-l="de">08 — Gedanke · L&D & Arbeitsqualität</span>
+      </div>
+      <h2 class="r r-up" data-delay="80">
+        <span data-l="en">What does <em style="color:var(--sap-smart-orange); font-style:normal;">"AI produces statistical average"</em> mean for our industry?</span><span data-l="de">Was bedeutet <em style="color:var(--sap-smart-orange); font-style:normal;">„KI produziert statistisches Mittelmaß"</em> für unsere Branche?</span>
+      </h2>
+      <p class="r r-up" data-delay="160">
+        <span data-l="en">Jonas Lempa's central argument raises a specific and uncomfortable question for Learning & Development — where the visual output and general experience is, frankly, often sub-par to begin with.</span><span data-l="de">Jonas Lempas zentrales Argument wirft eine konkrete und unbequeme Frage für Learning & Development auf — ein Feld, in dem die visuelle Ausgabe und die generelle Erfahrung, ehrlich gesagt, ohnehin oft mittelmäßig sind.</span>
+      </p>
+    </div>
+
+    <blockquote class="ld__quote r r-up">
+      <p>"If AI design is medium, what clients will be willing to pay for 'above medium'? I find this question especially relevant for our field of Learning & Development — where the visual output and general experience is generally sub-par. I suppose many clients would be happy with medium."</p>
+      <cite>— Magnus Pettersson · <span data-l="en">personal note</span><span data-l="de">persönliche Notiz</span></cite>
+    </blockquote>
+
+    <div class="ld__grid">
+      <div class="ld__card challenge r r-up">
+        <div class="badge">⬡ <span data-l="en">The Challenge</span><span data-l="de">Die Herausforderung</span></div>
+        <h3>
+          <span data-l="en">If clients are happy with medium, the argument for craft becomes harder to make.</span><span data-l="de">Wenn Kunden mit Mittelmaß zufrieden sind, wird das Argument für Handwerk schwerer zu vertreten.</span>
+        </h3>
+        <p>
+          <span data-l="en">If L&D clients are satisfied with AI-generated medium quality, many simply won't notice the difference — or won't care. Medium might be good enough. <b>That is a real commercial threat.</b></span><span data-l="de">Wenn L&D-Kunden mit KI-generiertem Mittelmaß zufrieden sind, werden viele den Unterschied schlicht nicht bemerken — oder es wird ihnen egal sein. Mittel könnte ausreichen. <b>Das ist eine reale kommerzielle Bedrohung.</b></span>
+        </p>
+      </div>
+      <div class="ld__card opportunity r r-up" data-delay="120">
+        <div class="badge">◆ <span data-l="en">The Opportunity</span><span data-l="de">Die Chance</span></div>
+        <h3>
+          <span data-l="en">Work that genuinely moves people still requires human insight, vision and emotional intelligence.</span><span data-l="de">Arbeit, die Menschen wirklich bewegt, braucht weiterhin menschliche Einsicht, Vision und emotionale Intelligenz.</span>
+        </h3>
+        <p>
+          <span data-l="en">Most of the L&D industry is still catching up with AI. If we stay ahead — using it better and more creatively than the rest of the field — we can combine AI's efficiency with the craft that sets quality apart.</span><span data-l="de">Der größte Teil der L&D-Branche zieht bei KI noch hinterher. Wenn wir vorne bleiben — sie besser und kreativer nutzen als der Rest des Feldes — können wir die Effizienz von KI mit dem Handwerk verbinden, das Qualität ausmacht.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="closing">
+      <div class="closing__kicker r r-up">
+        <span data-l="en">In closing</span><span data-l="de">Zum Abschluss</span>
+      </div>
+      <p class="closing__line r r-blur" data-delay="120">
+        <span data-l="en">The window to claim<br/>that position is <i>now.</i></span><span data-l="de">Das Fenster, diese Position<br/>zu besetzen, ist <i>jetzt.</i></span>
+      </p>
+      <div class="closing__sub r r-up" data-delay="320">
+        <span data-l="en">End of report &nbsp;·&nbsp; May 2026</span><span data-l="de">Ende des Berichts &nbsp;·&nbsp; Mai 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <img class="ft-logo" src="assets/sapered-logo-icon-white.svg" alt="SAPERED" />
+  <p>
+    <b>
+      <span data-l="en">Digital Design Days Milano 2026</span><span data-l="de">Digital Design Days Mailand 2026</span>
+    </b><br/>
+    <span data-l="en">Summary by Magnus Pettersson · May 2026</span><span data-l="de">Zusammenfassung von Magnus Pettersson · Mai 2026</span>
+  </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
