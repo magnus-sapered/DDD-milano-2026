@@ -465,17 +465,20 @@ section { position: relative; padding: 140px 0; }
   grid-column: 1 / 2;
   align-self: start;
   padding-top: 60px;
+  min-width: 0;
 }
 .intro-stack .b {
   grid-column: 2 / 3;
   align-self: center;
   text-align: right;
   padding-bottom: 0;
+  min-width: 0;
 }
 .intro-stack .c {
   grid-column: 1 / -1;
   padding-top: 80px;
   position: relative;
+  min-width: 0;
 }
 .intro-stack .c::before {
   content: "";
@@ -1380,15 +1383,62 @@ footer p b { color: var(--fg-1); font-weight: 600; }
 
 /* ============== Responsive ============== */
 @media (max-width: 780px) {
-  .brand-header { padding: 14px 20px; }
-  .brand-header .meta { font-size: 9px; letter-spacing: 0.12em; }
-  .dot-nav { right: 12px; padding: 10px 8px; gap: 11px; }
-  .dot-nav a::after { display: none; }
+  /* Kill all horizontal overflow.
+     position: relative on body is required on iOS for overflow: hidden to clip
+     position: absolute children (shapes-layer). Safe on mobile since sticky h-scroll is disabled. */
+  html { overflow-x: hidden; }
+  body { overflow-x: hidden; position: relative; }
+  .shapes-layer { overflow: hidden; }
+
+  /* Header: clip overflow and hide the meta text — logo + lang switcher is enough */
+  .brand-header {
+    padding: 14px 20px;
+    overflow: hidden;
+  }
+  .brand-header .meta { display: none; }
+  .dot-nav { display: none; }
+
   section { padding: 90px 0; }
   .wrap, .wrap-tight { padding: 0 24px; }
   .talk__media .speaker-label .name { font-size: 26px; }
-  .fact-table { grid-template-columns: 1fr; gap: 4px; }
-  .fact-table .key { padding: 14px 0 0; border-top: 1px solid rgba(255,255,255,0.10); }
-  .fact-table .val { padding: 6px 0 16px; border-top: none; }
-  .fact-table .row:last-child .val { border-bottom: 1px solid rgba(255,255,255,0.10); }
+
+  /* Venue: more breathing room between text and slideshow */
+  .venue-intro { padding-bottom: 48px; }
+
+  /* ---- Venue: native snap slideshow ---- */
+  /* Reset the sticky scroll scaffolding */
+  .h-scroll {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  .h-scroll__pin {
+    position: static !important;
+    height: auto !important;
+    /* Become the scroll container */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    width: 100%;
+  }
+  .h-scroll__pin::-webkit-scrollbar { display: none; }
+  .h-scroll__track {
+    /* Override any JS-set transform */
+    transform: none !important;
+    height: 62vw;
+    min-width: max-content;
+    width: max-content;
+    padding: 0 24px;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .h-scroll__card {
+    width: 80vw !important;
+    height: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+  .h-scroll__count,
+  .h-scroll__progress { display: none; }
 }

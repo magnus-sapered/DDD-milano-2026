@@ -64,7 +64,9 @@
 
   if (videoEl && playBtn && videoWrap) {
     const videoCursor = document.getElementById('video-cursor');
+    const mainEl = document.querySelector('main');
     let placeholder = null;
+    let savedScrollY = 0;
 
     function expand() {
       const rect = videoWrap.getBoundingClientRect();
@@ -90,7 +92,9 @@
       videoWrap.style.height = '100vh';
       videoWrap.style.borderRadius = '0';
 
-      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+      // Raise main above the fixed header/nav (which live in the root stacking context)
+      if (mainEl) mainEl.style.zIndex = '300';
     }
 
     function collapse() {
@@ -105,11 +109,12 @@
       videoWrap.style.height = targetRect.height + 'px';
       videoWrap.style.borderRadius = '16px';
 
-      document.body.style.overflow = '';
       videoWrap.classList.remove('is-expanded');
       if (videoCursor) videoCursor.classList.remove('is-visible');
 
       videoWrap.addEventListener('transitionend', () => {
+        document.documentElement.style.overflow = '';
+        if (mainEl) mainEl.style.zIndex = '';
         videoWrap.removeAttribute('style');
         if (placeholder) { placeholder.remove(); placeholder = null; }
       }, { once: true });
@@ -305,12 +310,28 @@
   // Re-compute the h-scroll height so total horizontal travel × 1.1
   // happens during the sticky window. This guarantees images finish
   // scrolling before vertical scrolling resumes.
+  const MOBILE_BP = 780;
+
+  function isMobile() { return window.innerWidth <= MOBILE_BP; }
+
+  function resetHScrollForMobile(section) {
+    section.style.height = '';
+    section.style.minHeight = '';
+    const pin = section.querySelector('.h-scroll__pin');
+    if (pin) pin.style.cssText = '';
+    const track = section.querySelector('.h-scroll__track');
+    if (track) track.style.transform = '';
+  }
+
   function recalcHScrollHeights() {
     hScrollSections.forEach((section) => {
+      if (isMobile()) {
+        resetHScrollForMobile(section);
+        return;
+      }
       const track = section.querySelector('.h-scroll__track');
       if (!track) return;
       const max = Math.max(0, track.scrollWidth - window.innerWidth);
-      // Add 1 viewport so we have time at start + end. Tuning factor controls speed.
       const desiredScroll = max + window.innerHeight * 0.5;
       section.style.height = (window.innerHeight + desiredScroll) + 'px';
     });
@@ -319,6 +340,11 @@
   window.__recalcH = recalcHScrollHeights;
 
   function updateHScroll(section) {
+    if (isMobile()) {
+      const track = section.querySelector('.h-scroll__track');
+      if (track) track.style.transform = '';
+      return;
+    }
     const rect = section.getBoundingClientRect();
     const total = section.offsetHeight - window.innerHeight;
     const scrolled = Math.max(0, Math.min(total, -rect.top));
