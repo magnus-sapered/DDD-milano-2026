@@ -364,6 +364,93 @@ section { position: relative; padding: 140px 0; }
   50%      { opacity: 1;   transform: scaleY(1); }
 }
 
+/* ============== VIDEO SECTION ============== */
+.video-section { padding: 80px 0 140px; }
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: #000;
+  cursor: none;
+  line-height: 0;
+}
+.video-wrap video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.video-wrap.is-playing .video-play-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+.video-wrap.is-expanded {
+  background: #000;
+  cursor: none;
+}
+.video-wrap.is-expanded video {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Custom cursor — play on hover, pause in fullscreen */
+.video-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.32);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 300;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+.video-cursor.is-visible { opacity: 1; }
+.cursor-icon {
+  width: 18px;
+  height: 18px;
+  color: rgba(255,255,255,0.92);
+  position: absolute;
+}
+.cursor-play  { margin-left: 3px; }
+.cursor-pause { display: none; }
+.video-cursor.show-pause .cursor-play  { display: none; }
+.video-cursor.show-pause .cursor-pause { display: block; }
+
+.video-play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(12,14,20,0.42);
+  border: none;
+  padding: 0;
+  cursor: none;
+  transition: opacity 300ms ease, background 300ms ease;
+}
+
+.video-play-label {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.65);
+  pointer-events: none;
+  user-select: none;
+}
+
 /* ============== INTRO (What is DDD) — playful asymmetric ============== */
 #intro { padding-top: 200px; padding-bottom: 220px; }
 

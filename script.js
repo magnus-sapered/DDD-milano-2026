@@ -56,6 +56,110 @@
   document.querySelectorAll('.r').forEach((el) => io.observe(el));
 
   // ===========================================================
+  // Video player
+  // ===========================================================
+  const videoEl = document.getElementById('field-report-video');
+  const playBtn = document.getElementById('video-play-btn');
+  const videoWrap = videoEl && videoEl.closest('.video-wrap');
+
+  if (videoEl && playBtn && videoWrap) {
+    const videoCursor = document.getElementById('video-cursor');
+    let placeholder = null;
+
+    function expand() {
+      const rect = videoWrap.getBoundingClientRect();
+
+      // Hold layout space while wrap is fixed
+      placeholder = document.createElement('div');
+      placeholder.style.cssText = `width:${rect.width}px;height:${rect.height}px;flex-shrink:0;`;
+      videoWrap.insertAdjacentElement('afterend', placeholder);
+
+      // Snap to fixed at exact current position — no transition yet
+      videoWrap.classList.add('is-expanded');
+      videoWrap.style.cssText = `position:fixed;top:${rect.top}px;left:${rect.left}px;width:${rect.width}px;height:${rect.height}px;z-index:200;margin:0;border-radius:16px;`;
+
+      // Force reflow so the browser registers the start state
+      videoWrap.offsetHeight;
+
+      // Animate to fullscreen
+      const ease = 'cubic-bezier(.4,0,.2,1)';
+      videoWrap.style.transition = `top 520ms ${ease},left 520ms ${ease},width 520ms ${ease},height 520ms ${ease},border-radius 520ms ease`;
+      videoWrap.style.top = '0';
+      videoWrap.style.left = '0';
+      videoWrap.style.width = '100vw';
+      videoWrap.style.height = '100vh';
+      videoWrap.style.borderRadius = '0';
+
+      document.body.style.overflow = 'hidden';
+    }
+
+    function collapse() {
+      if (!placeholder) return;
+      const targetRect = placeholder.getBoundingClientRect();
+
+      const ease = 'cubic-bezier(.4,0,.2,1)';
+      videoWrap.style.transition = `top 480ms ${ease},left 480ms ${ease},width 480ms ${ease},height 480ms ${ease},border-radius 480ms ease`;
+      videoWrap.style.top = targetRect.top + 'px';
+      videoWrap.style.left = targetRect.left + 'px';
+      videoWrap.style.width = targetRect.width + 'px';
+      videoWrap.style.height = targetRect.height + 'px';
+      videoWrap.style.borderRadius = '16px';
+
+      document.body.style.overflow = '';
+      videoWrap.classList.remove('is-expanded');
+      if (videoCursor) videoCursor.classList.remove('is-visible');
+
+      videoWrap.addEventListener('transitionend', () => {
+        videoWrap.removeAttribute('style');
+        if (placeholder) { placeholder.remove(); placeholder = null; }
+      }, { once: true });
+    }
+
+    function setPlaying(playing) {
+      if (playing) {
+        expand();
+        videoEl.play();
+        videoWrap.classList.add('is-playing');
+      } else {
+        videoEl.pause();
+        videoWrap.classList.remove('is-playing');
+        collapse();
+      }
+    }
+
+    playBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setPlaying(true);
+    });
+
+    videoWrap.addEventListener('click', () => {
+      if (videoWrap.classList.contains('is-playing')) setPlaying(false);
+    });
+
+    videoEl.addEventListener('ended', () => {
+      videoWrap.classList.remove('is-playing');
+      collapse();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && videoWrap.classList.contains('is-playing')) setPlaying(false);
+    });
+
+    // Custom cursor — play icon on hover, pause icon in fullscreen
+    if (videoCursor) {
+      videoWrap.addEventListener('mousemove', (e) => {
+        videoCursor.style.left = e.clientX + 'px';
+        videoCursor.style.top = e.clientY + 'px';
+        videoCursor.classList.add('is-visible');
+        videoCursor.classList.toggle('show-pause', videoWrap.classList.contains('is-expanded'));
+      });
+      videoWrap.addEventListener('mouseleave', () => {
+        videoCursor.classList.remove('is-visible');
+      });
+    }
+  }
+
+  // ===========================================================
   // Floating glass shapes — masked SVG silhouettes with parallax
   // ===========================================================
   const shapesLayer = document.getElementById('shapes-layer');

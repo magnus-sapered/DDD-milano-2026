@@ -32,6 +32,7 @@
 <!-- Side dot navigation -->
 <nav class="dot-nav" aria-label="Section navigation">
   <a href="#hero"       data-label="Opening"        data-label-en="Opening"          data-label-de="Eröffnung"></a>
+  <a href="#video"      data-label="Video"           data-label-en="Video"            data-label-de="Video"></a>
   <a href="#intro"      data-label="What is DDD"    data-label-en="What is DDD"      data-label-de="Was ist DDD"></a>
   <a href="#venue"      data-label="Venue"          data-label-en="Venue"            data-label-de="Location"></a>
   <a href="#numbers"    data-label="The Numbers"    data-label-en="The Numbers"      data-label-de="Die Zahlen"></a>
@@ -79,6 +80,20 @@
   <div class="hero__scroll">
     <span data-l="en">Scroll</span><span data-l="de">Scrollen</span>
     <span class="line"></span>
+  </div>
+</section>
+
+<!-- ============================================================
+     01b · VIDEO HIGHLIGHT
+============================================================= -->
+<section id="video" class="video-section">
+  <div class="wrap">
+    <div class="video-wrap r r-scale">
+      <video id="field-report-video" src="assets/video/Milano-Editc30.mp4" preload="metadata" playsinline></video>
+      <button class="video-play-btn" id="video-play-btn" aria-label="Play video">
+        <span class="video-play-label">Press to play video</span>
+      </button>
+    </div>
   </div>
 </section>
 
@@ -756,6 +771,16 @@
     <span data-l="en">Summary by Magnus Pettersson · May 2026</span><span data-l="de">Zusammenfassung von Magnus Pettersson · Mai 2026</span>
   </p>
 </footer>
+
+<div id="video-cursor" class="video-cursor" aria-hidden="true">
+  <svg class="cursor-icon cursor-play" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14z" fill="currentColor"/>
+  </svg>
+  <svg class="cursor-icon cursor-pause" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor"/>
+    <rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor"/>
+  </svg>
+</div>
 
 <script src="script.js"></script>
 </body>
